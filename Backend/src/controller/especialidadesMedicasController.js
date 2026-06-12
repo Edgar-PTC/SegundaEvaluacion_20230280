@@ -11,7 +11,7 @@ especialidadesMedicasController.getAll = async (req, res) => {
     }
 }
 
-especialidadesMedicasController.getAll = async (req, res) => {
+especialidadesMedicasController.insert = async (req, res) => {
     try {
         
     } catch (error) {
@@ -19,7 +19,7 @@ especialidadesMedicasController.getAll = async (req, res) => {
         return res.status(500).json({ "Error": error });
     }
 }
-especialidadesMedicasController.getAll = async (req, res) => {
+especialidadesMedicasController.delete = async (req, res) => {
     try {
         
     } catch (error) {
@@ -27,7 +27,7 @@ especialidadesMedicasController.getAll = async (req, res) => {
         return res.status(500).json({ "Error": error });
     }
 }
-especialidadesMedicasController.getAll = async (req, res) => {
+especialidadesMedicasController.update = async (req, res) => {
     try {
         
     } catch (error) {

@@ -16,7 +16,13 @@ const expedienteClinicoModel = new Schema({
     "diagnosis": {
         type: String
     },
-    //"medications" [{ medicineName }]
+    "medications": [
+        {
+            medicineName: {
+                type: String
+            }
+        }
+    ],
     "medicalNotes": {
         type: String
     },

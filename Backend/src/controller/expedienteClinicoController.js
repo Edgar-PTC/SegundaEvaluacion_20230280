@@ -11,7 +11,7 @@ expedienteClinicoController.getAll = async (req, res) => {
     }
 }
 
-expedienteClinicoController.getAll = async (req, res) => {
+expedienteClinicoController.insert = async (req, res) => {
     try {
         
     } catch (error) {
@@ -19,7 +19,7 @@ expedienteClinicoController.getAll = async (req, res) => {
         return res.status(500).json({ "Error": error });
     }
 }
-expedienteClinicoController.getAll = async (req, res) => {
+expedienteClinicoController.delete = async (req, res) => {
     try {
         
     } catch (error) {
@@ -27,7 +27,7 @@ expedienteClinicoController.getAll = async (req, res) => {
         return res.status(500).json({ "Error": error });
     }
 }
-expedienteClinicoController.getAll = async (req, res) => {
+expedienteClinicoController.update = async (req, res) => {
     try {
         
     } catch (error) {

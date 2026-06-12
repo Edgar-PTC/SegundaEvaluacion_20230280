@@ -41,7 +41,16 @@ const pacientesModel = new Schema({
     "bloodType": {
         type: String
     },
-    //"phoneEmergencyContacts" [{ phone, nameEmergencyContact }]
+    "phoneEmergencyContacts": [
+        {
+            "phone": {
+                type: String
+            },
+            "nameEmergencyContact": {
+                type: String
+            },
+        }
+    ],
     "profilePhoto": {
         type: String
     },
