@@ -23,6 +23,7 @@ app.use(e.json());
 
 //Endpoints
 app.use("/api/citasMedicas", citasMedicasRouter);
+app.use("/api/equipoMedico", equipoMedicoRouter);
 app.use("/api/especialidadesMedicas", especialidadesMedicasRouter);
 app.use("/api/expedienteClinico", expedienteClinicoRouter);
 app.use("/api/loginPacientes", loginPacientesRouter);

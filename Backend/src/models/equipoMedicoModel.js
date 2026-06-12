@@ -23,7 +23,7 @@ const equipoMedicoModel = new Schema({
     "brand": {
         type: String
     },
-    "model": {
+    "modelEquip": {
         type: String
     },
     "purchaseDate": {
