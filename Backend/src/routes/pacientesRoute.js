@@ -1,14 +1,14 @@
 import e from "express";
-import Controller from "../controller/.js"
+import pacientesController from "../controller/pacientesController.js"
+import upload from "../utils/cloudinaryConfig.js"
 
-const LRouter = e.Router();
+const pacientesRouter = e.Router();
 
-LRouter.route("/")
-.get(Controller.)
-.post(Controller.)
+pacientesRouter.route("/")
+.get(pacientesController.getAll)
 
-LRouter.route("/:id")
-.delete(Controller.)
-.put(Controller.)
+pacientesRouter.route("/:id")
+.delete(pacientesController.delete)
+.put(upload.single("profilePhoto"), pacientesController.update)
 
-export default LRouter;
+export default pacientesRouter;

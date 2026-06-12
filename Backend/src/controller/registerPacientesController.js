@@ -22,7 +22,7 @@ registerPacientesController.insert = async(req, res) => {
         password: password?.trim();
         phone: phone?.trim();
         address: address?.trim();
-        bloodType: address?.trim();
+        bloodType: bloodType?.trim();
 
         const exist = await pacientesModel.findOne({ email });
         if(exist){
@@ -32,7 +32,7 @@ registerPacientesController.insert = async(req, res) => {
         const passwordHash = await bcrypts.hash(password, 10);
 
         const newUser = pacientesModel({
-            name, lastName, email, password: passwordHash, birthDate, phone, address, bloodType, phoneEmergencyContacts, profilePhoto: req.file.path, profilePhoto_publicId: req.file.filename, isVerified: false, loginAttempts: 0, timeOut: null
+            name, lastName, email, password: passwordHash, birthDate, phone, address, bloodType, profilePhoto: req.file.path, profilePhoto_publicId: req.file.filename, isVerified: false, loginAttempts: 0, timeOut: null
         });
 
         await newUser.save();
@@ -59,7 +59,7 @@ registerPacientesController.insert = async(req, res) => {
             from: config.email.user_email,
             to: email,
             subject: "Verificar cuenta.",
-            html: htmlRegister(verificationCode, email)
+            html: htmlRegister(email, verificationCode)
         }
 
         transporter.sendMail(mailOptions, (error, info) => {

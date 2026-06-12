@@ -2,6 +2,9 @@ import e from "express";
 //Importar Routes.js
 import citasMedicasRouter from "./src/routes/citasMedicasRoute.js";
 import equipoMedicoRouter from "./src/routes/equipoMedicoRoute.js";
+import loginPacientesRouter from "./src/routes/loginPacientesRoute.js";
+import pacientesRouter from "./src/routes/pacientesRoute.js";
+import recoveryPasswordRouter from "./src/routes/recoveryPasswordRoute.js";
 import registerPacientesRouter from "./src/routes/registerPacientesRoute.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -18,6 +21,9 @@ app.use(e.json());
 
 //Endpoints
 app.use("/api/citasMedicas", citasMedicasRouter);
+app.use("/api/loginPacientes", loginPacientesRouter);
+app.use("/api/pacientes", pacientesRouter);
 app.use("/api/registerPacientes", registerPacientesRouter);
+app.use("/api/recoveryPassword", recoveryPasswordRouter);
 
 export default app;
