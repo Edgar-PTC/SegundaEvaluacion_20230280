@@ -32,7 +32,7 @@ registerPacientesController.insert = async(req, res) => {
         const passwordHash = await bcrypts.hash(password, 10);
 
         const newUser = pacientesModel({
-            name, lastName, email, password: passwordHash, birthDate, phone, address, bloodType, profilePhoto: req.file.path, profilePhoto_publicId: req.file.filename, isVerified: false, loginAttempts: 0, timeOut: null
+            name, lastName, email, password: passwordHash, birthDate, phone, address, bloodType, phoneEmergencyContacts, profilePhoto: req.file.path, profilePhoto_publicId: req.file.filename, isVerified: false, loginAttempts: 0, timeOut: null
         });
 
         await newUser.save();
