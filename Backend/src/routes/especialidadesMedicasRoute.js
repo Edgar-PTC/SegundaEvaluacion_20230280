@@ -1,14 +1,14 @@
 import e from "express";
-import Controller from "../controller/.js"
+import especialidadesMedicasController from "../controller/especialidadesMedicasController.js"
 
-const LRouter = e.Router();
+const especialidadesMedicasRouter = e.Router();
 
-LRouter.route("/")
-.get(Controller.)
-.post(Controller.)
+especialidadesMedicasRouter.route("/")
+.get(especialidadesMedicasController.getAll)
+.post(especialidadesMedicasController.insert)
 
-LRouter.route("/:id")
-.delete(Controller.)
-.put(Controller.)
+especialidadesMedicasRouter.route("/:id")
+.delete(especialidadesMedicasController.delete)
+.put(especialidadesMedicasController.update)
 
-export default LRouter;
+export default especialidadesMedicasRouter;

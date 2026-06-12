@@ -15,6 +15,8 @@ citasMedicasController.getAll = async (req, res) => {
 citasMedicasController.insert = async (req, res) => {
     try {
         const { patient_id, specialty_id, appointmentDate, reason, status, observations } = req.body;
+
+        
     } catch (error) {
         console.log("Error: " + error);
         return res.status(500).json({ "Error": error });

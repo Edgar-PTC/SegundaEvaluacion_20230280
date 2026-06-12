@@ -5,8 +5,8 @@
     medicalNotes
 */
 
-import { Schema, model } from "mongoose"
-import pacientesModel from "./pacientesModel";
+import { mongoose, Schema, model } from "mongoose"
+import pacientesModel from "./pacientesModel.js";
 
 const expedienteClinicoModel = new Schema({
     "patient_id": {

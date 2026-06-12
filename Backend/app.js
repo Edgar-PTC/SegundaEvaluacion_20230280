@@ -2,6 +2,8 @@ import e from "express";
 //Importar Routes.js
 import citasMedicasRouter from "./src/routes/citasMedicasRoute.js";
 import equipoMedicoRouter from "./src/routes/equipoMedicoRoute.js";
+import especialidadesMedicasRouter from "./src/routes/especialidadesMedicasRoute.js";
+import expedienteClinicoRouter from "./src/routes/expedienteClinicoRoute.js";
 import loginPacientesRouter from "./src/routes/loginPacientesRoute.js";
 import pacientesRouter from "./src/routes/pacientesRoute.js";
 import recoveryPasswordRouter from "./src/routes/recoveryPasswordRoute.js";
@@ -21,6 +23,8 @@ app.use(e.json());
 
 //Endpoints
 app.use("/api/citasMedicas", citasMedicasRouter);
+app.use("/api/especialidadesMedicas", especialidadesMedicasRouter);
+app.use("/api/expedienteClinico", expedienteClinicoRouter);
 app.use("/api/loginPacientes", loginPacientesRouter);
 app.use("/api/pacientes", pacientesRouter);
 app.use("/api/registerPacientes", registerPacientesRouter);

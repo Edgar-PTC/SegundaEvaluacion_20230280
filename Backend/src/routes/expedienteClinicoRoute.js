@@ -1,14 +1,14 @@
 import e from "express";
-import Controller from "../controller/.js"
+import expedienteClinicoController from "../controller/expedienteClinicoController.js"
 
-const LRouter = e.Router();
+const expedienteClinicoRouter = e.Router();
 
-LRouter.route("/")
-.get(Controller.)
-.post(Controller.)
+expedienteClinicoRouter.route("/")
+.get(expedienteClinicoController.getAll)
+.post(expedienteClinicoController.insert)
 
-LRouter.route("/:id")
-.delete(Controller.)
-.put(Controller.)
+expedienteClinicoRouter.route("/:id")
+.delete(expedienteClinicoController.delete)
+.put(expedienteClinicoController.update)
 
-export default LRouter;
+export default expedienteClinicoRouter;
